@@ -81,7 +81,7 @@ namespace DataAccess
         {
             var compiledExpr = expr?.Compile();
 
-            var allEntities = set.ToList();
+            var allEntities = set.ToList(); // <-- temp. workaround
             
             var filteredEntitiesQuery = allEntities.Where(x => x.CreatedBy == user || 
                                                           x.ModifiedBy == user || 
